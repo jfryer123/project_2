@@ -3,10 +3,19 @@
     <head>
         <meta charset="utf-8">
         <title>app index</title>
+        <% include ../partials/head.ejs %>
     </head>
     <body>
         <h1>App Index page</h1>
-        <h4>Display 4 Courts. Delete button on each court
+        <ul>
+          <% for(let i = 0; i < courts.length; i++){ %>
+              <li>
+                  <a href="/app/appshow<%=courts[i].id; %>">
+                    Court Number <%=courts[i].courtNumber; %>
+                  </a>
+              </li>
+                  <% } %>
+        </ul>
         <nav>
             <a href="/app/new">Add a New Court</a>
         </nav>
