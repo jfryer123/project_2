@@ -16,6 +16,7 @@ const mongoURI = process.env.MONGODB_URI
 // Middleware
 // allows us to use put and delete methods
 app.use(express.static('public'));
+
 app.use(methodOverride('_method'))
 // parses info from our input fields into an object
 app.use(express.urlencoded({ extended: false }))
@@ -62,10 +63,10 @@ app.get('/app', (req, res)=>{
 });
 
 // app index page
-app.get('/app', (req, res) => {
-        res.render('app')
-
-    })
+// app.get('/app', (req, res) => {
+//         res.render('app')
+//
+//     })
 
 
 //edit a court Route
@@ -81,11 +82,14 @@ app.get("/app/:id/edit", (req,res) => {
 //show the court page
 app.get('/app/:id', (req, res)=>{
     Court.findById(req.params.id, (err, foundCourt)=>{
+      console.log(err);
+      console.log(foundCourt);
+      console.log("=========");
         res.render('app/appshow.ejs', {
             court:foundCourt
         });
     });
-});
+})
 
 //create new court route
 app.post('/app', (req, res) => {
@@ -95,10 +99,26 @@ app.post('/app', (req, res) => {
     //     req.body.playing = false;
     // }
     Court.create(req.body, (error, createdCourt) => {
+      console.log(error);
+      console.log(req.body);
         res.redirect('/app');
     });
 });
 
+//update
+app.put("/app/:id", (req,res) => {
+    Court.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedProduct) => {
+        console.log(updatedProduct);
+        res.redirect("/app");
+    });
+});
+
+app.delete('/:id', (req, res)=>{
+    Product.findByIdAndRemove(req.params.id, (err, deletedProduct) => {
+      console.log(deletedProduct);
+        res.redirect('/app');
+      });
+})
 
 const userController = require('./controllers/users.js')
 app.use('/users', userController)

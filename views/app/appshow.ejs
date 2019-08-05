@@ -1,11 +1,36 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <% include ../partials/head.ejs %>
+        <title>show</title>
     </head>
     <body>
-        <h1>Court Details</h1>
-        <h4>Display names of players and score</h4>
+        <h1>Court Number <%=court.courtNumber; %> </h1>
+        <div class="container">
+          <div class="row">
+            <h4>Who's Playing?</h4>
+            <p><%=court.player1%></p>
+            <p><%=court.player2%></p>
+            <p><%=court.player3%></p>
+            <p><%=court.player4%></p>
+            <h4>What's the Score?</h4>
+            <p><%=court.set1%></p>
+            <p><%=court.set2%></p>
+            <p><%=court.set3%></p>
+            <p><%=court.set4%></p>
+            <p><%=court.set5%></p>
+          </div>
+
+          <div class="row">
+               <form action="/app/:id/edit/<%=court._id%>?_method=PUT" method="POST">
+                   <a href="/app/<%=court._id%>/edit"><button type="button" name="button">Edit This Court</button></a>
+                   <form action="/<%=court._id%>?_method=DELETE" method="POST">
+                       <input type="Submit" name="" value="Delete">
+                   </form>
+               </div>
+        <nav>
+            <a href="/app">Back to All Courts</a>
+        </nav>
     </body>
 </html>

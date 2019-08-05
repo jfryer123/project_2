@@ -4,13 +4,15 @@
         <meta charset="utf-8">
         <title>app index</title>
         <% include ../partials/head.ejs %>
+
     </head>
     <body>
         <h1>App Index page</h1>
         <ul>
+
           <% for(let i = 0; i < courts.length; i++){ %>
               <li>
-                  <a href="/app/appshow<%=courts[i].id; %>">
+                  <a href="/app/<%=courts[i].id; %>">
                     Court Number <%=courts[i].courtNumber; %>
                   </a>
               </li>
