@@ -7,10 +7,13 @@ const session = require('express-session')
 require('dotenv').config()
 const Court = require('./models/appmodels/data.js');
 const app = express()
+const db = mongoose.connection;
 
 
 // Configuration
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 3000;
+
+
 const mongoURI = process.env.MONGODB_URI
 
 // Middleware
@@ -20,8 +23,9 @@ app.use(express.static('public'));
 app.use(methodOverride('_method'))
 // parses info from our input fields into an object
 app.use(express.urlencoded({ extended: false }))
+app.use(express.json());//
 app.use(session({
-  secret: process.env.SECRET,
+  secret: "feedmeseymour",
   resave: false,
   saveUninitialized: false
 }))
@@ -32,9 +36,9 @@ mongoose.connection.once('open', ()=> {
   console.log('connected to mongo', mongoURI)
 })
 // Error / success
-// db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
-// db.on('connected', () => console.log('mongo connected: ', MONGODB_URI));
-// db.on('disconnected', () => console.log('mongo disconnected'));
+db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
+db.on('connected', () => console.log('mongo connected: ', mongoURI));
+db.on('disconnected', () => console.log('mongo disconnected'));
 
 //routes
 //add a NEW court page
