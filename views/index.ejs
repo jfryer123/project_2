@@ -9,10 +9,11 @@
         <h1>
           <% if(currentUser) { %>
             Welcome <%=currentUser.username%>!  </h1>
-            <form action="/sessions?_method=DELETE" method="POST">
-              <input type="submit" value="Logout" class="createButton4"/>
+          </div>
+            <form class="createButton" action= "/sessions?_method=DELETE" method="POST">
+              <input type="submit" value="Logout">
             </form>
-            <a class="createButton4" href="/app">Create a tournament</a>
+            <a class="createButton" href="/app">Create a tournament</a>
 
           </form>
       <% } else { %>
