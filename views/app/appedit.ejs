@@ -8,17 +8,17 @@
     <body>
         <h1>Court Number <%= court.courtNumber %></h1>
         <form class="" action="/app/<%=court._id%>?_method=PUT"  method="POST">
-            Player 1: <input type="text" name="" value="<%=court.player1%>" ><br/>
-            Player 2: <input type="text" name="" value="<%=court.player2%>"><br/>
-            Player 3: <input type="text" name="" value="<%=court.player3%>"><br/>
-            Player 4: <input type="text" name="" value="<%=court.player4%>"><br/>
+            Player 1: <input type="text" name="player1" value="<%=court.player1%>" ><br/>
+            Player 2: <input type="text" name="player2" value="<%=court.player2%>"><br/>
+            Player 3: <input type="text" name="player3" value="<%=court.player3%>"><br/>
+            Player 4: <input type="text" name="player4" value="<%=court.player4%>"><br/>
             Currently Playing? <input type="checkbox" name="playing" ><br/>
             What's the score? (Log Player 1's score first.)<br/>
-            First Set: <input type="text" name="" value="<%=court.set1%>">
-            Second Set: <input type="text" name="" value="<%=court.set2%>">
-            Third Set: <input type="text" name="" value="<%=court.set3%>">
-            Fourth Set: <input type="text" name="" value="<%=court.set4%>">
-            Fifth Set: <input type="text" name="" value="<%=court.set5%>"><br/>
+            First Set: <input type="text" name="set1" value="<%=court.set1%>">
+            Second Set: <input type="text" name="set2" value="<%=court.set2%>">
+            Third Set: <input type="text" name="set3" value="<%=court.set3%>">
+            Fourth Set: <input type="text" name="set4" value="<%=court.set4%>">
+            Fifth Set: <input type="text" name="set5" value="<%=court.set5%>"><br/>
             <input type="submit" value="Submit">
         </form>
     </body>

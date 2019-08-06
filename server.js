@@ -113,6 +113,7 @@ app.post('/app', (req, res) => {
 //update
 app.put("/app/:id", (req,res) => {
     Court.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedCourt) => {
+      console.log(req.body);
         console.log(updatedCourt);
         res.redirect("/app");
     });
