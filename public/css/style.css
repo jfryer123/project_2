@@ -5,6 +5,169 @@
  *
  * Made By MaterializeCSS.com
  */
-body {
-  background-color: #40A14C;
+ html {
+   background-color: #40A14C;
+
+ }
+ .container {
+   display: flex;
+ }
+ h1 {
+   font-family: 'Playfair Display';
+ }
+
+ .nav {
+   background-image: url("https://cdn3.iconfinder.com/data/icons/the-elegant-set/96/tennis-court-1.png");
+   background-position: right;
+   background-repeat: no-repeat;
+   height: 80px;
+   color: #263238;
+   margin-bottom: 100px;
+   margin-left: 350px;
+   margin-right: 550px;
+   margin-top: 100px;
+   font-family: 'Playfair Display';
+
+ }
+
+.createButton {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 30%;
+  height: 45%;
+  text-align: center;
+  justify-content: space-between;
+  background: #BDBDBD;
+  box-shadow: 2px 2px;
+  border: 0px;
+  transition: 0.2s ease-in-out;
+  border-radius: 10px;
+  border-color: #4f5b62;
+  margin-left: 55px;
+  color: #263238
+
+
+}
+
+a:-webkit-
+any-link {
+  cursor: pointer;
+  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-style: initial;
+  text-decoration-color: initial;
+  color: #263238;
+}
+
+a {
+  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-style: initial;
+  text-decoration-color: initial;
+  color: #263238;
+}
+
+
+.newContainer {
+  font-family: 'Playfair Display';
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: -40px;
+  margin-top: -80px;
+  align-items: center;
+  width: 30%
+  color: #263238
+}
+.validate {
+  background: #BDBDBD;
+  border-color: #BDBDBD;
+}
+label {
+  margin: 10px;
+  color: #263238;
+}
+
+ .createButton2 {
+  font-family: 'Playfair Display';
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 570px;
+  align-items: center;
+  box-shadow: 2px 2px;
+  background: #BDBDBD;
+  width: 30%
+  border: 0px;
+  transition: 0.2s ease-in-out;
+  border-radius: 10px;
+  border-color: #4f5b62;
+  color: #263238
+
+
+}
+
+.createButton3 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 30%;
+  height: 45%;
+  text-align: center;
+  justify-content: space-between;
+  background: #BDBDBD;
+  box-shadow: 2px 2px;
+  border: 0px;
+  transition: 0.2s ease-in-out;
+  border-radius: 10px;
+  border-color: #4f5b62;
+  margin-left: 55px;
+  color: #263238
+
+
+
+}
+
+.createButton4 {
+  font-family: 'Playfair Display';
+  font-size: 25px;
+  align-items: center;
+  box-shadow: 2px 2px;
+  background: #BDBDBD;
+  width: 30%
+  border: 0px;
+  transition: 0.2s ease-in-out;
+  border-radius: 10px;
+  border-color: #4f5b62;
+  margin: 10px;
+  color: #263238
+
+}
+
+.createButton5 {
+ font-family: 'Playfair Display';
+ font-size: 25px;
+ display: flex;
+ justify-content: center;
+width: 30%;
+margin-left: 500px;
+ align-items: center;
+ box-shadow: 2px 2px;
+ background: #BDBDBD;
+ width: 30%
+ border: 0px;
+ transition: 0.2s ease-in-out;
+ border-radius: 10px;
+ border-color: #4f5b62;
+ color: #263238
+
+
+
+}
+
+ul {
+  list-style-type: none;
 }

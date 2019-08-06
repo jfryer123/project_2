@@ -7,9 +7,13 @@
 
     </head>
     <body>
-        <h1>App Index page</h1>
-        <ul>
+      <div class="nav">
 
+        <h1>View Your Courts</h1>
+          </div>
+          <div class="newContainer">
+
+        <ul>
           <% for(let i = 0; i < courts.length; i++){ %>
               <li>
                   <a href="/app/<%=courts[i].id; %>">
@@ -18,8 +22,12 @@
               </li>
                   <% } %>
         </ul>
+            </div>
+            <div class="createButton5">
+
         <nav>
             <a href="/app/new">Add a New Court</a>
         </nav>
+          </div>
     </body>
 </html>

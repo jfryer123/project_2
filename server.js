@@ -8,7 +8,7 @@ require('dotenv').config()
 const Court = require('./models/appmodels/data.js');
 const app = express()
 const db = mongoose.connection;
-
+const morgan = require("morgan")
 
 // Configuration
 const PORT = process.env.PORT || 3000;
@@ -21,6 +21,7 @@ const mongoURI = process.env.MONGODB_URI
 app.use(express.static('public'));
 
 app.use(methodOverride('_method'))
+app.use(morgan("tiny"))
 // parses info from our input fields into an object
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json());//
@@ -111,24 +112,26 @@ app.post('/app', (req, res) => {
 
 //update
 app.put("/app/:id", (req,res) => {
-    Court.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedProduct) => {
-        console.log(updatedProduct);
+    Court.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedCourt) => {
+        console.log(updatedCourt);
         res.redirect("/app");
     });
 });
 
-app.delete('/:id', (req, res)=>{
-    Product.findByIdAndRemove(req.params.id, (err, deletedProduct) => {
-      console.log(deletedProduct);
-        res.redirect('/app');
-      });
-})
+
 
 const userController = require('./controllers/users.js')
 app.use('/users', userController)
 
 const sessionsController = require('./controllers/sessions.js')
 app.use('/sessions', sessionsController)
+
+app.delete('/:id', (req, res)=>{
+    Court.findByIdAndRemove(req.params.id, (err, deletedCourt) => {
+      console.log(deletedCourt);
+        res.redirect('/');
+      });
+})
 
 // Listen
 app.listen(PORT, () => console.log('auth happening on port', PORT))

@@ -4,24 +4,19 @@
     <% include ../partials/head.ejs %>
   </head>
     <body>
-      <div class="container">
-        <h1>Create User</h1>
-        <div class="row">
-          <form class="col s12" action="/users" method="POST">
-            <div class="row">
-              <div class="input-field col s6">
-                <input placeholder="Placeholder" id="username" type="text" class="validate" name="username" required>
-                <label for="username">User Name</label>
-              </div>
+      <div class="nav">
+        <h1>Create Your Login</h1>
+      </div>
+          <form class="" action="/users" method="POST">
+            <div class="newContainer">
+                <label for="username">Create a User Name</label>
+                <input placeholder="username" id="username" type="text" class="validate" name="username" required>
+
+              <label for="password">Create a Password</label>
+                <input placeholder="password" id="password" type="text" class="validate" name="password" required> <br>
             </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="password" type="password" class="validate" name="password" required>
-                <label for="password">Password</label>
-              </div>
-            </div>
-            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-              <i class="material-icons right">send</i>
+            <button class="createButton2" type="submit" name="action">Submit
+
             </button>
           </form>
         </div>

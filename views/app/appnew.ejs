@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
+        <% include ../partials/head.ejs %>
         <meta charset="utf-8">
         <title>New Court</title>
     </head>
     <body>
+      <div class="nav">
+
+
         <h1>Create a New Court</h1>
+        </div>
+        <div class="newContainer">
+
         <form action="/app" method="POST">
             Court: <input type="number" name="courtNumber" /><br/>
             Player 1: <input type="text" name="player1" /><br/>
@@ -21,5 +28,6 @@
             Fifth Set: <input type="text" name="set5" /><br/>
             <input type="submit" value="Create Court"/>
         </form>
+          </div>
     </body>
 </html>

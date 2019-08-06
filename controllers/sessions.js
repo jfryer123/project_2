@@ -24,6 +24,7 @@ sessions.post('/', (req, res) => {
 })
 
 sessions.delete('/', (req, res)=>{
+  console.log("baiobf");
     req.session.destroy(() => {
         res.redirect('/')
     })
