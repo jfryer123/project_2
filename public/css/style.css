@@ -9,18 +9,20 @@
    background-color: #40A14C;
 
  }
- .container {
+ .nav {
+   background-image: url("https://cdn3.iconfinder.com/data/icons/the-elegant-set/96/tennis-court-1.png");
+
+   background-repeat: no-repeat;
+   height: 100px;
+}
+ /* .container {
    display: flex;
  }
  h1 {
    font-family: 'Playfair Display';
  }
 
- .nav {
-   background-image: url("https://cdn3.iconfinder.com/data/icons/the-elegant-set/96/tennis-court-1.png");
-   background-position: right;
-   background-repeat: no-repeat;
-   height: 80px;
+
    color: #263238;
    margin-bottom: 100px;
    margin-left: 350px;
@@ -170,4 +172,4 @@ margin-left: 500px;
 
 ul {
   list-style-type: none;
-}
+} */
