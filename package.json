@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/jfryer123/project_2#readme",
   "dependencies": {
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.0",
     "bootstrap": "^4.3.1",
     "dotenv": "^8.0.0",
     "ejs": "^2.6.2",
